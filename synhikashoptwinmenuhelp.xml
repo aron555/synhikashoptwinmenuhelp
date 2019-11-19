@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.8" group="system" method="upgrade">
+	<name>PLG_SYNHIKASHOPTWINMENUHELP</name>
+	<creationDate>19.11.2019</creationDate>
+	<author>Dmitry Tsymbal</author>
+	<authorEmail>cymbal@delo-design.ru</authorEmail>
+	<authorUrl>https://delo-design.ru</authorUrl>
+	<copyright>Copyright © 2019 Delo Design. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>PLG_SYNHIKASHOPTWINMENUHELP_XML_DESCRIPTION</description>
+
+	<scriptfile>script.php</scriptfile>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_synhikashoptwinmenuhelp.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_synhikashoptwinmenuhelp.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_synhikashoptwinmenuhelp.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_synhikashoptwinmenuhelp.sys.ini</language>
+	</languages>
+
+	<files>
+		<filename plugin="synhikashoptwinmenuhelp">synhikashoptwinmenuhelp.php</filename>
+		<folder>language</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="checkalias"
+						type="radio"
+						default="0"
+						label="PLG_SYNHIKASHOPTWINMENUHELP_CONFIG_CHECKALIAS"
+						class="btn-group"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>
