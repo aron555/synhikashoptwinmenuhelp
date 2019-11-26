@@ -196,6 +196,7 @@ class plgSystemSynhikashoptwinmenuhelp extends CMSPlugin
 
 				}
 
+				$element->product_id = $input->getVar('product_id');
 				//проверяем алиас у продукта
 				if(!$this->checkProductAliasOnFree($element))
 				{
@@ -207,6 +208,7 @@ class plgSystemSynhikashoptwinmenuhelp extends CMSPlugin
 				{
 					//перезаписываем входящие данные
 					$dataData['product']['product_alias'] = $element->product_alias;
+					unset($dataData['product']['product_id']);
 					$input->set('data', $dataData);
 				}
 
@@ -312,5 +314,6 @@ class plgSystemSynhikashoptwinmenuhelp extends CMSPlugin
 		$db->setQuery($query);
 		return $db->execute();
 	}
+
 
 }
